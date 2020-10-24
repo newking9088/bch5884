@@ -1,0 +1,238 @@
+# Follow these steps below:
+Step 1: Open your terminal and go to where you want to clone your forked repo in Local Machine
+For ex. newking9088@Nawaraj-HP:~ cd git/
+
+Step 2: Clone your forked repo to git/ and it will create a folder in there: git clone https://github.com/newking9088/bch5884.git(copy url from the repo under code section)
+For ex: if your repo name is newking9088/bch5884 then it will create bch5884/ folder in git/
+
+Step 3: cd into your folder you just created (bch5884/ folder)
+For ex: cd bch5884/
+
+Step 4: git remote -v  (it will show the following in my case)
+origin	https://github.com/newking9088/bch5884.git (fetch)
+origin	https://github.com/newking9088/bch5884.git (push)
+
+Step 5: Add the master of the forked repo which is called upstream...ours was forked from sstag/bch5884
+For ex: git remote add upstream https://github.com/sstagg/bch5884.git(url of repo where our repo was forked from)
+
+Step 5: git remote -v  (it will show upstream as well)
+origin	https://github.com/newking9088/bch5884.git (fetch)
+origin	https://github.com/newking9088/bch5884.git (push)
+upstream	https://github.com/sstagg/bch5884.git (fetch)
+upstream	https://github.com/sstagg/bch5884.git (push)
+
+Step 6: git fetch upstream   ( It fetches the upstream)
+remote: Enumerating objects: 173, done.
+remote: Counting objects: 100% (173/173), done.
+remote: Compressing objects: 100% (137/137), done.
+remote: Total 171 (delta 63), reused 133 (delta 29), pack-reused 0
+Receiving objects: 100% (171/171), 833.00 KiB | 3.49 MiB/s, done.
+Resolving deltas: 100% (63/63), completed with 1 local object.
+From https://github.com/sstagg/bch5884
+ * [new branch]      master     -> upstream/master
+
+Step 7: Merge our forked repo with its master (upstream): git merge upstream/master
+Updating 860020d..45cfdb4
+Fast-forward
+ .DS_Store                                       |  Bin 6148 -> 0 bytes
+ 20oct01/grades.py                               |   30 +
+ 20oct06/2FA9noend.pdb                           | 1337 +++++++++++++++++++++++++++++++++
+ 20oct06/2FA9noendtmp.pdb                        |    0
+ 20oct06/force.py                                |   12 +
+ 20oct06/tempfact.py                             |   28 +
+ 20oct06/tmp.out                                 | 1337 +++++++++++++++++++++++++++++++++
+ 20oct08/2FA9.pdb                                | 3496 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 20oct08/2FA9noend.pdb                           | 1337 +++++++++++++++++++++++++++++++++
+ 20oct08/grades.py                               |   34 +
+ 20oct08/tempfact.py                             |   30 +
+ 20oct08/tmp.out                                 | 2925 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 20oct13/continuebreak.py                        |   25 +
+ 20oct13/primetest.py                            |   13 +
+ 20oct15/2FA9noend.pdb                           | 1337 +++++++++++++++++++++++++++++++++
+ 20oct15/__pycache__/intersection.cpython-38.pyc |  Bin 0 -> 677 bytes
+ 20oct15/choice.py                               |   11 +
+ 20oct15/intersection.py                         |   32 +
+ 20oct15/parsepdbexample.py                      |   25 +
+ 20oct15/parsepdbexamplewithdict.py              |   22 +
+ 20oct15/parsepdbexamplewithlistoflists.py       |   20 +
+ 20sep01/CPC_iotm_flat-300x278.jpg               |  Bin 0 -> 35890 bytes
+ 20sep01/webpage.html                            |   17 +
+ 20sep03/CPC_iotm_flat-300x278.jpg               |  Bin 0 -> 35890 bytes
+ 20sep03/homepage.html                           |   70 ++
+ 20sep03/imgs/CPC_iotm_flat-300x278.jpg          |  Bin 0 -> 35890 bytes
+ 20sep08/emimage.jpg                             |  Bin 0 -> 96871 bytes
+ 20sep08/homepage.html                           |   65 ++
+ 20sep08/img.jpg                                 |  Bin 0 -> 35890 bytes
+ 20sep10/__pycache__/helloworld.cpython-38.pyc   |  Bin 0 -> 201 bytes
+ 20sep10/helloworld.py                           |    5 +
+ 20sep10/plot.py                                 |   10 +
+ 20sep15/floatingpoint.py                        |    9 +
+ 20sep15/input.py                                |    9 +
+ 20sep17/dist.py                                 |   19 +
+ 20sep17/futuretime.py                           |    8 +
+ 20sep17/input.py                                |   11 +
+ 20sep17/round.py                                |   15 +
+ 20sep22/futuretime.py                           |   15 +
+ 20sep22/futuretime2.py                          |   12 +
+ 20sep22/systest.py                              |    7 +
+ 20sep24/encode.py                               |   18 +
+ 20sep24/input.py                                |   19 +
+ 20sep24/loop.py                                 |    8 +
+ 20sep29/encode.py                               |   34 +
+ 20sep29/evalexample.py                          |   10 +
+ 20sep29/formattedstrings.py                     |   20 +
+ 2FA9.pdb                                        | 3495 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2FA9noend.pdb                                   | 1337 +++++++++++++++++++++++++++++++++
+ 2FA9noend2mov.pdb                               | 1338 +++++++++++++++++++++++++++++++++
+ gittest.txt                                     |   19 +
+ testfile.txt                                    |    3 +
+ website/images.html                             |   33 +
+ website/imgs/COPII_plane.png                    |  Bin 0 -> 20098 bytes
+ website/imgs/cop2.jpg                           |  Bin 0 -> 88924 bytes
+ website/imgs/fractal.png                        |  Bin 0 -> 88120 bytes
+ website/imgs/groel.png                          |  Bin 0 -> 58598 bytes
+ website/imgs/sec1331surf_small.png              |  Bin 0 -> 88207 bytes
+ website/imgs/shinyfloor_small.png               |  Bin 0 -> 246285 bytes
+ website/index.html                              |   46 ++
+ website/links.html                              |   36 +
+ website/stagglab.css                            |  108 +++
+ website/table.html                              |   58 ++
+ website/tmplt.html                              |   26 +
+ 64 files changed, 18931 insertions(+)
+ delete mode 100644 .DS_Store
+ create mode 100755 20oct01/grades.py
+ create mode 100644 20oct06/2FA9noend.pdb
+ create mode 100644 20oct06/2FA9noendtmp.pdb
+ create mode 100755 20oct06/force.py
+ create mode 100755 20oct06/tempfact.py
+ create mode 100644 20oct06/tmp.out
+ create mode 100644 20oct08/2FA9.pdb
+ create mode 100644 20oct08/2FA9noend.pdb
+ create mode 100755 20oct08/grades.py
+ create mode 100755 20oct08/tempfact.py
+ create mode 100644 20oct08/tmp.out
+ create mode 100755 20oct13/continuebreak.py
+ create mode 100755 20oct13/primetest.py
+ create mode 100644 20oct15/2FA9noend.pdb
+ create mode 100644 20oct15/__pycache__/intersection.cpython-38.pyc
+ create mode 100755 20oct15/choice.py
+ create mode 100755 20oct15/intersection.py
+ create mode 100755 20oct15/parsepdbexample.py
+ create mode 100755 20oct15/parsepdbexamplewithdict.py
+ create mode 100755 20oct15/parsepdbexamplewithlistoflists.py
+ create mode 100644 20sep01/CPC_iotm_flat-300x278.jpg
+ create mode 100644 20sep01/webpage.html
+ create mode 100644 20sep03/CPC_iotm_flat-300x278.jpg
+ create mode 100644 20sep03/homepage.html
+ create mode 100644 20sep03/imgs/CPC_iotm_flat-300x278.jpg
+ create mode 100644 20sep08/emimage.jpg
+ create mode 100644 20sep08/homepage.html
+ create mode 100644 20sep08/img.jpg
+ create mode 100644 20sep10/__pycache__/helloworld.cpython-38.pyc
+ create mode 100755 20sep10/helloworld.py
+ create mode 100755 20sep10/plot.py
+ create mode 100755 20sep15/floatingpoint.py
+ create mode 100755 20sep15/input.py
+ create mode 100755 20sep17/dist.py
+ create mode 100755 20sep17/futuretime.py
+ create mode 100755 20sep17/input.py
+ create mode 100755 20sep17/round.py
+ create mode 100755 20sep22/futuretime.py
+ create mode 100755 20sep22/futuretime2.py
+ create mode 100755 20sep22/systest.py
+ create mode 100755 20sep24/encode.py
+ create mode 100755 20sep24/input.py
+ create mode 100755 20sep24/loop.py
+ create mode 100755 20sep29/encode.py
+ create mode 100755 20sep29/evalexample.py
+ create mode 100755 20sep29/formattedstrings.py
+ create mode 100644 2FA9.pdb
+ create mode 100644 2FA9noend.pdb
+ create mode 100644 2FA9noend2mov.pdb
+ create mode 100644 gittest.txt
+ create mode 100644 testfile.txt
+ create mode 100644 website/images.html
+ create mode 100644 website/imgs/COPII_plane.png
+ create mode 100644 website/imgs/cop2.jpg
+ create mode 100644 website/imgs/fractal.png
+ create mode 100644 website/imgs/groel.png
+ create mode 100644 website/imgs/sec1331surf_small.png
+ create mode 100644 website/imgs/shinyfloor_small.png
+ create mode 100644 website/index.html
+ create mode 100644 website/links.html
+ create mode 100644 website/stagglab.css
+ create mode 100644 website/table.html
+ create mode 100644 website/tmplt.html
+
+Step 8: git push -u origin master  (Finally push changes to your remote repo)
+Username for 'https://github.com': newking9088
+Password for 'https://newking9088@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/newking9088/bch5884.git
+   860020d..45cfdb4  master -> master
+
+
+If you want to add some files from your another repo to this forked repo follow these steps after
+executing thos 7 steps:
+Step 8: Come out of your current folder (bch5884/ folder): cd ../
+
+Step 9: Clone the repo you want the files from and it will create a BCH5884-Programming-For-Chemist-and-BioChemist/ folder in  git
+For ex: git clone https://github.com/newking9088/BCH5884-Programming-For-Chemist-and-BioChemist.git
+Cloning into 'BCH5884-Programming-For-Chemist-and-BioChemist'...
+remote: Enumerating objects: 157, done.
+remote: Counting objects: 100% (157/157), done.
+remote: Compressing objects: 100% (113/113), done.
+remote: Total 157 (delta 56), reused 131 (delta 36), pack-reused 0
+Receiving objects: 100% (157/157), 4.97 MiB | 3.46 MiB/s, done.
+Resolving deltas: 100% (56/56), done.
+
+Step 10: cd BCH5884-Programming-For-Chemist-and-BioChemist/     (cd into the folder you just created)
+
+Step 11: mv Assignments/ ../bch5884/    ( to move the Assignments/ folder from BCH5884-Programming-For-Chemist-and-BioChemist/ to bch5884/)
+
+Step 12: cd ../bch5884/    ( cd into the folder where we have Assignments/ folder to commit to remote repo)
+
+Step 13: git status  ( This step is optional...it is just to see what folders/files are yet to be committed..it shows following in our case)
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Assignments/
+	Projects/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Step 14: git add Assignments/  (same as usual after this step)
+
+Step 15: git commit -m " My assignment solutions"   ( it shows the following in our case)
+[master 08bd7e9]  My assignment solutions
+ 11 files changed, 14621 insertions(+)
+ create mode 100644 Assignments/Picture1.png
+ create mode 100644 Assignments/assignment1.html
+ create mode 100644 Assignments/assignment2.html
+ create mode 100644 Assignments/assignment3.html
+ create mode 100644 Assignments/assignment3.ipynb
+ create mode 100644 Assignments/background.jpg
+ create mode 100644 Assignments/css/stylesheet1.css
+ create mode 100644 Assignments/css/stylesheet2.css
+ create mode 100644 Assignments/nb3sn.gif
+ create mode 100644 Assignments/nb3sn.jpg
+ create mode 100644 Assignments/os.txt
+
+Step 16: git push -u origin master  ( it shows the following in our case)
+Username for 'https://github.com': newking9088
+Password for 'https://newking9088@github.com': 
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (24/24), 983.84 KiB | 11.18 MiB/s, done.
+Total 24 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/newking9088/bch5884.git
+   45cfdb4..816b571  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+
